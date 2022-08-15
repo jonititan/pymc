@@ -304,20 +304,21 @@ def model_to_networkx(
 ):
     """Produce a networkx Digraph from a PyMC model.
 
-    Requires networkx, which may be installed most easily with
+    Requires networkx, which may be installed most easily with::
+    
         conda install networkx
 
-    Alternatively, you may install using pip with
+    Alternatively, you may install using pip with::
+
         pip install networkx
-    See
-    https://networkx.org/documentation/stable/
-    for more information.
+
+    See https://networkx.org/documentation/stable/ for more information.
 
     Parameters
     ----------
-    model : pm.Model
+    model : Model
         The model to plot. Not required when called from inside a modelcontext.
-    var_names : iterable of variable names, optional
+    var_names : iterable of str, optional
         Subset of variables to be plotted that identify a subgraph with respect to the entire model graph
     formatting : str, optional
         one of { "plain" }
